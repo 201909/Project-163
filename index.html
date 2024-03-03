@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shooting Game in Virtual Reality</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"> </script>
+    
+    <script src="paintball.js"></script>
+    <script src="walls.js"></script>
+</head>
+<body>
+    <a-scene id="scene">
+        <a-assets>
+         <a-assets-item id = "gunImage" src = "models/gun.gltf"></a-assets-item>
+        </a-assets>
+       <a-entity id = "environment"environment="preset:default;skyType:gradient;lighting:point"></a-entity>
+        <a-entity
+        id="camera"
+        camera
+        position="20 5 15"
+        wasd-controls
+        look-controls="pointerLockEnabled: true"        
+      >
+        <a-entity id ="gun" 
+        gltf-model = "#gunImage"            
+        position="0 -4.4 3"
+        rotation="0 180 0"
+        scale="0.35 1 1">
+    </a-entity>
+        <a-cursor></a-cursor>
+        </a-entity>
+        </a-entity>
+
+<a-entity id="walls">
+            <a-box position = "40 0 25" rotation = "0 45 0" width = "10" height = "3" color = "yellow"></a-rotation>
+            <a-box position = "12 0 14" rotation = "0 25 0" width = "10" height = "3" color = "red"></a-rotation>
+            <a-box position = "17 0 21" rotation = "0 67 0" width = "10" height = "3" color = "pink"></a-rotation>
+            <a-box position = "18 0 1" rotation = "0 32 0" width = "10" height = "3" color = "green"></a-rotation>
+            <a-box position = "23 0 10" rotation = "0 90 0" width = "10" height = "3" color = "yellow"></a-rotation>
+            <a-box position = "0 0 0" rotation = "0 12 0" width = "10" height = "3" color = "orange"></a-rotation>
+            <a-box position = "12 0 12" rotation = "0 0 0" width = "10" height = "3" color = "white"></a-rotation>
+            <a-box position = "30 0 2.4" rotation = "0 65 0" width = "10" height = "3" color = "black"></a-rotation>
+
+                <a-box position = "34 0 25" rotation = "0 45 0" width = "10" height = "3" color = "yellow"></a-rotation>
+                    <a-box position = "12 0 24" rotation = "0 25 0" width = "10" height = "3" color = "red"></a-rotation>
+                    <a-box position = "7 0 21" rotation = "0 67 0" width = "10" height = "3" color = "pink"></a-rotation>
+                    <a-box position = "20 0 4" rotation = "0 32 0" width = "10" height = "3" color = "green"></a-rotation>
+                    <a-box position = "16 0 10" rotation = "0 90 0" width = "10" height = "3" color = "yellow"></a-rotation>
+                    <a-box position = "20 0 28" rotation = "0 12 0" width = "10" height = "3" color = "orange"></a-rotation>
+                    <a-box position = "7 0 11" rotation = "0 0 0" width = "10" height = "3" color = "white"></a-rotation>
+                    <a-box position = "2 0 2.4" rotation = "0 65 0" width = "10" height = "3" color = "black"></a-rotation>  
+                        
+                        <a-box position = "20 0 25" rotation = "0 45 0" width = "10" height = "3" color = "yellow"></a-rotation>
+                            <a-box position = "1 0 14" rotation = "0 25 0" width = "10" height = "3" color = "red"></a-rotation>
+                            <a-box position = "7 0 21" rotation = "0 67 0" width = "10" height = "3" color = "pink"></a-rotation>
+                            <a-box position = "27 0 1" rotation = "0 32 0" width = "10" height = "3" color = "green"></a-rotation>
+                            <a-box position = "2 0 10" rotation = "0 90 0" width = "10" height = "3" color = "yellow"></a-rotation>
+                            <a-box position = "3 0 0" rotation = "0 12 0" width = "10" height = "3" color = "orange"></a-rotation>
+                            <a-box position = "9.331 0  12" rotation = "0 0 0" width = "10" height = "3" color = "white"></a-rotation>
+                            <a-box position = "13.675 0 2.4" rotation = "0 65 0" width = "10" height = "3" color = "black"></a-rotation>
+                            </a-entity>
+        <a-entity id = "paintballs" paintball></a-entity>
+    </a-scene>
+</body>
+</html>
